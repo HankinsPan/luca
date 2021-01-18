@@ -5,7 +5,7 @@ export const Nav00DataSource = {
   page: { className: 'home-page' },
   logo: {
     className: 'header0-logo',
-    children: 'https://os.alipayobjects.com/rmsportal/mlcYmsRilwraoAe.svg',
+    children: 'https://raw.githubusercontent.com/HankinsPan/luca/master/src/assets/draw/crust-alpha.png',
   },
   Menu: {
     className: 'header0-menu',
