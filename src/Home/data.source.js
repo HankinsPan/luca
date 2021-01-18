@@ -5,7 +5,7 @@ export const Nav00DataSource = {
   page: { className: 'home-page' },
   logo: {
     className: 'header0-logo',
-    children: 'https://raw.githubusercontent.com/HankinsPan/luca/master/src/assets/draw/crust-alpha.png',
+    children: 'https://raw.githubusercontent.com/HankinsPan/luca/master/src/assets/draw/crust-alpha.svg',
   },
   Menu: {
     className: 'header0-menu',
@@ -255,6 +255,7 @@ export const Content30DataSource = {
             children:
               '微信（朋友圈 、好友）',
           },
+          handleType: 'Share'
         },
       },
       {
@@ -275,6 +276,7 @@ export const Content30DataSource = {
             children:
               'http请求、上传、下载、本地存储',
           },
+          handleType: 'HttpRequest'
         },
       },
       {
@@ -295,6 +297,7 @@ export const Content30DataSource = {
             children:
               'pdf预览',
           },
+          handleType: 'Document'
         },
       },
       {
@@ -315,6 +318,7 @@ export const Content30DataSource = {
             children:
               'MP4视频播放',
           },
+          handleType: 'Media'
         },
       },
       {
@@ -335,6 +339,7 @@ export const Content30DataSource = {
             children:
               '文本复制',
           },
+          handleType: 'Text'
         },
       },
       {
@@ -355,6 +360,7 @@ export const Content30DataSource = {
             children:
               '监听app前后台状态、监听横竖屏状态',
           },
+          handleType: 'DeviceInfo'
         },
       },
       {
@@ -375,6 +381,7 @@ export const Content30DataSource = {
             children:
               '警告、模态窗',
           },
+          handleType: 'Toast'
         },
       },
       {
@@ -395,6 +402,7 @@ export const Content30DataSource = {
             children:
               '跳转、关闭/返回、跳转到对应的tab页',
           },
+          handleType: 'Router'
         },
       },
     ],

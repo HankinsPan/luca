@@ -22,7 +22,7 @@ class Header extends React.Component {
 
   render() {
     const { dataSource, isMobile, ...props } = this.props;
-    console.log('==== header props >>>>',this.props)
+    // console.log('==== header props >>>>',this.props)
     const { phoneOpen } = this.state;
     const navData = dataSource.Menu.children;
     const navChildren = navData.map((item) => {
