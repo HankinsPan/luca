@@ -103,8 +103,8 @@ export const Banner00DataSource = {
   textWrapper: { className: 'banner0-text-wrapper' },
   title: {
     className: 'banner0-title',
-    children: 'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-    // children: icBridge,
+    // children: 'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
+    children: 'https://raw.githubusercontent.com/HankinsPan/luca/master/src/assets/draw/JSBridge_02.png',
   },
   content: {
     className: 'banner0-content',
