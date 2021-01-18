@@ -104,7 +104,7 @@ export const Banner00DataSource = {
   title: {
     className: 'banner0-title',
     // children: 'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-    children: 'https://raw.githubusercontent.com/HankinsPan/luca/master/src/assets/draw/JSBridge_02.png',
+    children: 'https://github.com/HankinsPan/luca/blob/master/src/assets/draw/JSBridge_03.svg',
   },
   content: {
     className: 'banner0-content',
