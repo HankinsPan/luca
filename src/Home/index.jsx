@@ -56,6 +56,7 @@ export default class Home extends React.Component {
 
   onHandleClick = (handleType) => {
     console.log('===== ### handleType >>>>', handleType)
+    window.ReactNativeWebView.postMessage(`Hello Alpha ${handleType}`)
   }
 
   render () {
