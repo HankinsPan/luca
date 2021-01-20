@@ -2,6 +2,7 @@
 /* eslint arrow-parens: 0 */
 import React from 'react'
 import { enquireScreen } from 'enquire-js'
+import invoke from 'react-native-webview-invoke/browser'
 
 import Nav0 from './Nav0'
 import Banner0 from './Banner0'
@@ -24,6 +25,10 @@ let isMobile
 enquireScreen((b) => {
   isMobile = b
 })
+
+// listener
+const onShowShare = invoke.bind('onShowShare')
+const onSendMediaTxt = invoke.bind('onSendMediaTxt')
 
 const { location = {} } = typeof window !== 'undefined' ? window : {}
 
@@ -54,9 +59,24 @@ export default class Home extends React.Component {
     /* 如果不是 dva 2.0 请删除 end */
   }
 
+  async onInvokeHandle (handleType) {
+    console.log('==== onInvokeHandle handleType >>>>', handleType)
+    switch (handleType) {
+      case 'Share':
+        await onShowShare()
+        break
+      case 'Media':
+        await onSendMediaTxt()
+        break
+      default:
+        break
+    }
+  }
+
   onHandleClick = (handleType) => {
     console.log('===== ### handleType >>>>', handleType)
-    window.ReactNativeWebView.postMessage(`Hello Alpha ${handleType}`)
+    this.onInvokeHandle(handleType)
+    // window.ReactNativeWebView.postMessage(`Hello Alpha ${handleType}`)
   }
 
   render () {
