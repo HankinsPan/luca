@@ -3,6 +3,7 @@
 import React from 'react'
 import { enquireScreen } from 'enquire-js'
 import invoke from 'react-native-webview-invoke/browser'
+import { message } from 'antd'
 
 import Nav0 from './Nav0'
 import Banner0 from './Banner0'
@@ -28,7 +29,7 @@ enquireScreen((b) => {
 
 // listener
 const onShowShare = invoke.bind('onShowShare')
-const onSendMediaTxt = invoke.bind('onSendMediaTxt')
+const onShowAlert = invoke.bind('onShowAlert')
 
 const { location = {} } = typeof window !== 'undefined' ? window : {}
 
@@ -57,7 +58,17 @@ export default class Home extends React.Component {
       }, 500)
     }
     /* 如果不是 dva 2.0 请删除 end */
+    invoke.define('onShowMessageTips', this.onShowMessageTips.bind(this))
   }
+
+  onShowMessageTips () {
+    console.log('==== onShowMessageTips')
+    return message.info('Native 发送消息到 H5 页面')
+  }
+
+  // onShowToast () {
+  //   return message.info('Native 发送消息到 H5 页面')
+  // }
 
   async onInvokeHandle (handleType) {
     console.log('==== onInvokeHandle handleType >>>>', handleType)
@@ -66,8 +77,11 @@ export default class Home extends React.Component {
         await onShowShare()
         break
       case 'Media':
-        await onSendMediaTxt()
+        await onShowAlert()
         break
+      // case 'Text':
+      //   this.onShowToast()
+      //   break
       default:
         break
     }
