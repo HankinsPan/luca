@@ -212,7 +212,7 @@ export const Content10DataSource = {
   content: {
     className: 'content1-content',
     children:
-      'react-native@0.63.1 \nreact-native-web-view@11.0.3 \nreact@16.13.1',
+      'react-native@0.63.1 \nreact-native-web-view@11.0.3 \nreact@16.13.1 \nreact-native-webview-invoke@0.6.2',
   },
 }
 export const Content30DataSource = {
